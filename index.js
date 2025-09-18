@@ -10,7 +10,7 @@ const app = express();
 app.use(cors());
 app.use(express.json());
 
-const JWT_SECRET = process.env.JWT_SECRET || "secret123";
+const JWT_SECRET = process.env.JWT_SECRET || "52412135Yatier@";
 
 // Middleware pour vérifier le token
 function authMiddleware(req, res, next) {
@@ -120,5 +120,5 @@ app.delete('/users/:id', authMiddleware, roleMiddleware('admin'), async (req, re
 });
 
 // ------------------- SERVER -------------------
-const PORT = process.env.PORT || 5000;
+const PORT = process.env.PORT || 5432;
 app.listen(PORT, () => console.log(`Server running on port ${PORT}`));
